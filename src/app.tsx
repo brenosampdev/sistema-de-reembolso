@@ -1,17 +1,15 @@
-import {
-  CaretLeft,
-  CaretRight,
-  ForkKnife,
-  MagnifyingGlass,
-} from 'phosphor-react'
-import { Button } from './components/button'
-import { IconButton } from './components/icon-button'
-import { NavLink } from './components/nav-link'
+import { ForkKnife, MagnifyingGlass } from 'phosphor-react'
+import { Button } from './components/ui/button'
+import { IconButton } from './components/ui/icon-button'
+import { NavLink } from './components/ui/nav-link'
+import { RefundItem } from './components/refund-item'
+import { Pagination } from './components/pagination'
+import * as Input from './components/ui/input'
 import logoImg from './assets/logo.svg'
 
 export function App() {
   const active = false
-  
+
   return (
     <div className="mx-auto mt-10 mb-14 max-w-7xl px-3">
       <header className="flex items-center justify-between">
@@ -28,102 +26,23 @@ export function App() {
           <h1 className="font-bold text-gray-500 text-xl">Solicitações</h1>
 
           <div className="flex gap-3 border-b border-b-gray-200 pb-6">
-            <input
-              type="text"
-              placeholder="Pesquisar pelo nome"
-              className="h-12 flex-1 rounded-lg border border-gray-300 bg-transparent px-4 py-3.75 text-gray-500 text-sm caret-green-200 placeholder:text-gray-400 focus-visible:outline-2 focus-visible:outline-green-200"
-            />
+            <Input.Root>
+              <Input.Field placeholder="Pesquisar pelo nome" />
+            </Input.Root>
 
             <IconButton Icon={MagnifyingGlass} />
           </div>
 
           <div className="flex min-h-84 flex-col gap-4">
-            <div className="flex flex-row items-center justify-between">
-              <div className="flex flex-row items-center gap-3">
-                <div className="rounded-full bg-gray-200 p-2">
-                  <ForkKnife
-                    size={20}
-                    weight="fill"
-                    className="text-green-200"
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-bold">Rodrigo</span>
-                  <span className="font-normal text-gray-400">Alimentação</span>
-                </div>
-              </div>
-              <div className="flex flex-row gap-1">
-                <span className="font-normal">R$</span>
-                <span className="font-bold">1.200,00</span>
-              </div>
-            </div>
-            <div className="flex flex-row items-center justify-between">
-              <div className="flex flex-row items-center gap-3">
-                <div className="rounded-full bg-gray-200 p-2">
-                  <ForkKnife
-                    size={20}
-                    weight="fill"
-                    className="text-green-200"
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-bold">Rodrigo</span>
-                  <span className="font-normal text-gray-400">Alimentação</span>
-                </div>
-              </div>
-              <div className="flex flex-row gap-1">
-                <span className="font-normal">R$</span>
-                <span className="font-bold">1.200,00</span>
-              </div>
-            </div>
-            <div className="flex flex-row items-center justify-between">
-              <div className="flex flex-row items-center gap-3">
-                <div className="rounded-full bg-gray-200 p-2">
-                  <ForkKnife
-                    size={20}
-                    weight="fill"
-                    className="text-green-200"
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-bold">Rodrigo</span>
-                  <span className="font-normal text-gray-400">Alimentação</span>
-                </div>
-              </div>
-              <div className="flex flex-row gap-1">
-                <span className="font-normal">R$</span>
-                <span className="font-bold">1.200,00</span>
-              </div>
-            </div>
-            <div className="flex flex-row items-center justify-between">
-              <div className="flex flex-row items-center gap-3">
-                <div className="rounded-full bg-gray-200 p-2">
-                  <ForkKnife
-                    size={20}
-                    weight="fill"
-                    className="text-green-200"
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-bold">Rodrigo</span>
-                  <span className="font-normal text-gray-400">Alimentação</span>
-                </div>
-              </div>
-              <div className="flex flex-row gap-1">
-                <span className="font-normal">R$</span>
-                <span className="font-bold">1.200,00</span>
-              </div>
-            </div>
+            <RefundItem
+              Icon={ForkKnife}
+              name="Rodrigo"
+              category="Alimentação"
+              valueInCents={100000}
+            />
           </div>
 
-          <div className="flex flex-row items-center justify-center gap-2.5">
-            <IconButton Icon={CaretLeft} className="p-1" />
-            <div className="text-[14px]">
-              <span className="font-normal text-gray-400">1/</span>
-              <span className="font-normal text-gray-400">3</span>
-            </div>
-            <IconButton Icon={CaretRight} className="p-1" />
-          </div>
+          <Pagination />
         </div>
       </main>
     </div>
