@@ -1,4 +1,4 @@
-import { MagnifyingGlass } from 'phosphor-react'
+import { CaretLeft, CaretRight, ForkKnife, MagnifyingGlass } from 'phosphor-react'
 import logoImg from './assets/logo.svg'
 
 export function App() {
@@ -44,10 +44,80 @@ export function App() {
           </div>
 
           <div className="flex min-h-84 flex-col gap-4">
-            {/* Continue list here */}
+            <div className="flex flex-row items-center justify-between">
+              <div className='flex flex-row items-center gap-3'>
+                <div className="rounded-full bg-gray-200 p-2">
+                  <ForkKnife size={20} weight="fill" className="text-green-200" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-bold">Rodrigo</span>
+                  <span className="font-normal text-gray-400">Alimentação</span>
+                </div>
+              </div>
+              <div className='flex flex-row gap-1'>
+                <span className='font-normal'>R$</span>
+                <span className='font-bold'>1.200,00</span>
+              </div>
+            </div>
+            <div className="flex flex-row items-center justify-between">
+              <div className='flex flex-row items-center gap-3'>
+                <div className="rounded-full bg-gray-200 p-2">
+                  <ForkKnife size={20} weight="fill" className="text-green-200" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-bold">Rodrigo</span>
+                  <span className="font-normal text-gray-400">Alimentação</span>
+                </div>
+              </div>
+              <div className='flex flex-row gap-1'>
+                <span className='font-normal'>R$</span>
+                <span className='font-bold'>1.200,00</span>
+              </div>
+            </div>
+            <div className="flex flex-row items-center justify-between">
+              <div className='flex flex-row items-center gap-3'>
+                <div className="rounded-full bg-gray-200 p-2">
+                  <ForkKnife size={20} weight="fill" className="text-green-200" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-bold">Rodrigo</span>
+                  <span className="font-normal text-gray-400">Alimentação</span>
+                </div>
+              </div>
+              <div className='flex flex-row gap-1'>
+                <span className='font-normal'>R$</span>
+                <span className='font-bold'>1.200,00</span>
+              </div>
+            </div>
+            <div className="flex flex-row items-center justify-between">
+              <div className='flex flex-row items-center gap-3'>
+                <div className="rounded-full bg-gray-200 p-2">
+                  <ForkKnife size={20} weight="fill" className="text-green-200" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-bold">Rodrigo</span>
+                  <span className="font-normal text-gray-400">Alimentação</span>
+                </div>
+              </div>
+              <div className='flex flex-row gap-1'>
+                <span className='font-normal'>R$</span>
+                <span className='font-bold'>1.200,00</span>
+              </div>
+            </div>
           </div>
 
-          {/* Pagination controls here */}
+          <div className='flex flex-row items-center justify-center gap-2.5'>
+            <button type='button' className='cursor-pointer rounded-lg bg-green-200 p-1'>
+              <CaretLeft size={24} className='text-white'/>
+            </button>
+            <div className='text-[14px]'>
+              <span className='font-normal text-gray-400'>1/</span>
+              <span className='font-normal text-gray-400'>3</span>
+            </div>
+            <button type='button' className='cursor-pointer rounded-lg bg-green-200 p-1'>
+              <CaretRight size={24} className='text-white'/>
+            </button>
+          </div>
         </div>
       </main>
     </div>
